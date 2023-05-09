@@ -1,0 +1,98 @@
+:root {
+    --mainColor: #ff2525;
+}
+
+header {
+    background: linear-gradient(to bottom, #19547b 40%, #ffd89b);
+}
+
+
+#header-content {
+    max-width: 1500px !important;
+}
+
+#footer-content {
+    max-width: 1440px !important;
+}
+
+.text-heading {
+    font-size: 30px;
+    text-align: justify;
+}
+
+.btn-grad {
+    --b: 4px;
+    --s: .50em;
+    --color: #ff2525;
+    --textColor: #fff;
+
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--textColor);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 18px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-weight: 600;
+}
+
+.btn-grad:hover,
+.btn-grad:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+.btn-grad:active {
+    background: var(--color);
+    color: var(--textColor);
+}
+
+
+.heading {
+    width: fit-content;
+    padding: 0 20px;
+    margin: 150px 0 50px 0;
+    font-weight: 600;
+    font-size: 40px;
+    border-left: 5px solid var(--mainColor);
+    border-right: 5px solid var(--mainColor);
+}
+
+.colorized-heading {
+    color: var(--mainColor);
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.footer-logo {
+    cursor: pointer;
+    width: 140px;
+    height: 48.2px;
+}
+
+.fa-brands {
+    cursor: pointer;
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+footer {
+    background-image: linear-gradient(to bottom, #dc3545, var(--mainColor));
+}
+
+nav a {
+    color: #fff !important;
+    font-weight: 500 !important;
+    margin-left: 25px !important;
+}
+
+@media screen and (max-width: 560px) {}
