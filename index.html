@@ -33,35 +33,330 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-5 me-5 mb-lg-0">
+                        <ul class="navbar-nav text-center ms-auto mb-5 me-5 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">হোম</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">চিকিৎসকগণ</a>
+                                <a class="nav-link" href="#doctor-list">চিকিৎসকগণ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">আমাদের সমন্ধে</a>
+                                <a class="nav-link" href="#footer">আমাদের সমন্ধে</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">লগ ইন</a>
+                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal5">লগ
+                                    ইন</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <section class="container py-5 px-4">
-                <div class="row align-items-center ps-3">
-                    <div class="col-6">
+            <section class="container py-4 py-lg-5 px-0 px-lg-4">
+                <div class="row align-items-center ps-md-3 d-flex flex-column-reverse flex-lg-row">
+                    <div class="col-12 col-md-6 text-center text-lg-start">
                         <h1 class="text-heading fw-bold text-white">আপনার রোগের উপসর্গ এর উপর ভিত্তি করে আমরা বিশেষজ্ঞ
                             ডাক্তার এর
                             পরামর্শ দিয়ে
                             থাকি।
                         </h1>
-                        <button class="btn-grad mt-3 ms-1" role="button">পরামর্শ নিন</button>
+                        <button class="btn-grad mt-3 ms-1" role="button" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal1">পরামর্শ নিন</button>
                     </div>
-                    <div class="col-6 text-end ps-5 pe-3">
-                        <img src="images/cover/cover.png" alt="">
+                    <div class="col-12 col-md-6 text-lg-end p-0 pb-3 pb-lg-0 ps-lg-5 pe-lg-3">
+                        <img class="img-fluid" src="images/cover/cover.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel"><span style="color: #ff2525">সঠিক
+                                        তথ্য প্রদান পূর্বক</span> নিচের ফর্মটি
+                                    পূরণ করুন</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="row mb-3">
+                                        <label for="inputName" class="col-sm-2 col-form-label">নাম</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputName">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputAge" class="col-sm-2 col-form-label">বয়স</label>
+                                        <div class="col-sm-10">
+                                            <input type="number" class="form-control" id="inputAge">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputEmail3" class="col-sm-2 col-form-label">ই-মেইল</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail3">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputPhoneNumber" class="col-sm-2 col-form-label">মোবাইল
+                                            নম্বর</label>
+                                        <div class="col-sm-10">
+                                            <input type="number" class="form-control" id="inputPhoneNumber">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputAddress" class="col-sm-2 col-form-label">ঠিকানা</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputAddress">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label" for="inputOldDisease">পূর্বের
+                                            সমস্যা</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-select" id="inputOldDisease">
+                                                <option value="21">টাইফয়েড</option>
+                                                <option value="1">পোলিও মায়েলাইটিস</option>
+                                                <option value="2">হেপাটাইটিস (এ, ডি)</option>
+                                                <option value="3">কলেরা</option>
+                                                <option value="4">আমাশয়</option>
+                                                <option value="5">যক্ষ্মা</option>
+                                                <option value="6">বসন্ত</option>
+                                                <option value="7">ছত্রাক জনিত ফুসফুস সংক্রমণ</option>
+                                                <option value="8" selected>চিকুনগুনিয়া</option>
+                                                <option value="9">ফাইলেরিয়াসিস</option>
+                                                <option value="10">কালাজ্বর</option>
+                                                <option value="11">স্লিপিং সিকনেস</option>
+                                                <option value="12">করোনা ভাইরাস</option>
+                                                <option value="13">হেপাটাইটিস (বি, সি)</option>
+                                                <option value="14">এইডস</option>
+                                                <option value="15">ধনুস্টংকার</option>
+                                                <option value="17">হার্ট সম্বন্ধনীয়</option>
+                                                <option value="18">পার্কিনসন'স রোগ</option>
+                                                <option value="19">ক্র্যানিওটমি বা মস্তিষ্কের সার্জারি</option>
+                                                <option value="20">হার্ট, কিডনি, ফুসফুস, লিভার বা বোন ম্যারোর মতো প্রধান
+                                                    অঙ্গের প্রতিস্থাপন</option>
+                                                <option value="21">অন্যান্য</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputAdvice" class="col-sm-2 col-form-label">পূর্বের পরামর্শ</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-select" id="inputAdvice">
+                                                <option value="23">অধ্যাপক ডাঃ এম ফয়েজ [মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ]
+                                                </option>
+                                                <option value="1">অধ্যাপক ডাঃ ইমরান বিন ইউসুফ [নেফ্রোলজি ও মেডিসিন
+                                                    বিশেষজ্ঞ]
+                                                </option>
+                                                <option value="2">ডাঃ সাইদুল ইসলাম [মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ]
+                                                </option>
+                                                <option value="3">অধ্যাপক ডাঃ ইমরান বিন ইউসুফ [নেফ্রোলজি ও মেডিসিন
+                                                    বিশেষজ্ঞ]
+                                                </option>
+                                                <option value="4">অধ্যাপক ডাঃ এম ফয়েজ [মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ]
+                                                </option>
+                                                <option value="5">অধ্যাপক ডাঃ ইমরান বিন ইউসুফ [নেফ্রোলজি ও মেডিসিন
+                                                    বিশেষজ্ঞ]
+                                                </option>
+                                                <option value="6" selected>অধ্যাপক ডাঃ এস কে মনির [মেডিসিন ও
+                                                    নিউরোমেডিসিন বিশেষজ্ঞ]
+                                                </option>
+                                                <option value="7">অধ্যাপক ডাঃ ইমরান বিন ইউসুফ [নেফ্রোলজি ও মেডিসিন
+                                                    বিশেষজ্ঞ]
+                                                </option>
+                                                <option value="8">অধ্যাপক ডাঃ এম ফয়েজ [মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ]
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputDate" class="col-sm-2 col-form-label">তারিখ</label>
+                                        <div class="col-sm-10">
+                                            <input type="date" class="form-control" id="inputDate">
+                                        </div>
+                                    </div>
+                                    <fieldset class="row mb-3">
+                                        <legend class="col-form-label col-sm-2 pt-0">বর্তমান সমস্যা</legend>
+                                        <div class="col-sm-10">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck4">
+                                                <label class="form-check-label" for="gridCheck4">
+                                                    চালে শব্দ হয়
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck5">
+                                                <label class="form-check-label" for="gridCheck5">
+                                                    রাতে অদ্ভুদ শব্দ শোনা যায়
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck6">
+                                                <label class="form-check-label" for="gridCheck6">
+                                                    ঘুম হয়
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck7">
+                                                <label class="form-check-label" for="gridCheck7">
+                                                    একা থাকতে ভয় লাগে
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                                <label class="form-check-label" for="gridCheck1">
+                                                    মাথা ব্যথা
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck2">
+                                                <label class="form-check-label" for="gridCheck2">
+                                                    বুকে ব্যথা
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck3">
+                                                <label class="form-check-label" for="gridCheck3">
+                                                    কানে কম শোনা
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck8">
+                                                <label class="form-check-label" for="gridCheck8">
+                                                    দুঃস্বপম দেখে
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck9">
+                                                <label class="form-check-label" for="gridCheck9">
+                                                    ঝাকুনি দেয়
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck10">
+                                                <label class="form-check-label" for="gridCheck10">
+                                                    অস্থির লাগে
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck11">
+                                                <label class="form-check-label" for="gridCheck11">
+                                                    বিরক্ত লাগে
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck12">
+                                                <label class="form-check-label" for="gridCheck12">
+                                                    ক্লান্ত লাগে
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck17">
+                                                <label class="form-check-label" for="gridCheck17">
+                                                    শরীর বেশি ঘামায়
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck18">
+                                                <label class="form-check-label" for="gridCheck18">
+                                                    শবাসকষ্ট হয়
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck19">
+                                                <label class="form-check-label" for="gridCheck19">
+                                                    খুব অস্থির লাগে
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck20">
+                                                <label class="form-check-label" for="gridCheck20">
+                                                    মাঝে মাঝে এমনে অনূভূত হয় যে, এখনি মরে
+                                                    যাবো
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck13">
+                                                <label class="form-check-label" for="gridCheck13">
+                                                    অরিরিক্ত ধোয়া মোছা করা, পরিশষ্কার পরিচ্চছন্ন
+                                                    থাকার প্রবণতা আছে
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck14">
+                                                <label class="form-check-label" for="gridCheck14">
+                                                    আসবাবপত্র বা বই-খাতা নিরদিশষ্ট ছকে গুছিয়ে
+                                                    রাখার প্রবণতা আছে
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck15">
+                                                <label class="form-check-label" for="gridCheck15">
+                                                    প্রতিদিনের ছোটখান্টো বিষয়ে অতিরিক্ত চিন্তা হয়
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck16">
+                                                <label class="form-check-label" for="gridCheck16">
+                                                    বুক ধরফর করে
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="submit-button" type="button" class="btn btn-success" data-bs-dismiss="modal"
+                                    data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">পরামর্শ
+                                    দিন</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade d-none" id="exampleModalToggle2" aria-hidden="true"
+                    aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 text-danger" id="exampleModalToggleLabel2">আমাদের পরামর্শ
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h4>আপনার রোগের লক্ষণ সমূহ পর্যালোচোনা করে আমরা আপনাকে নিমোক্ত বিশেষজ্ঞ এর শরণাপন্ন
+                                    হওয়ার
+                                    পরামর্শ দিচ্ছি।</h4>
+                                <br>
+                                <div id="doctor-1" class="card">
+                                    <img src="images/person/person-1.jpg" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">অধ্যাপক ডাঃ ইমরান বিন ইউসুফ</h5>
+                                        <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি (যুক্তরাষ্ট্র)
+                                        </p>
+                                        <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                        <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                        <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                    </div>
+                                </div>
+                                <div id="doctor-2" class="card">
+                                    <img src="images/person/person-3.jpg" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">অধ্যাপক ডাঃ সাবিনা জাহান</h5>
+                                        <p class="card-text">এমবিবিএস, এমডি (এন্ডােক্রাইনােলজী ও মেটাবলিজম)</p>
+                                        <p class="card-text fw-bold">ডায়াবেটিস, থাইরয়েড ও হরমােন বিশেষজ্ঞ</p>
+                                        <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                        <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -76,39 +371,393 @@
 
     <!-- main section starts -->
     <main>
-        <section id="other-service" class="container mb-5">
+        <section id="other-service" class="container">
             <h2 class="heading mx-md-auto">এটা <span class="colorized-heading">যেভাবে কাজ </span> করে</h2>
-            <div class="row justify-content-center align-content-center align-items-center px-5">
-                <div class="col">
-                    <img src="images/icons/searching.png" alt="">
+            <div class="row justify-content-center align-content-center align-items-center px-2 px-lg-5 mb-3 mb-lg-0">
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid" src="images/icons/searching.png" alt="">
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6">
                     <h3 class="fw-bold">সার্চ ডাক্তার</h3>
                     <p class="text-justify">ন্যূনতম প্রচেষ্টায় আপনার ডাক্তারকে সহজেই খুঁজুন। আমরা আপনার জন্য
                         সবকিছু
                         গুছিয়ে রেখেছি।</p>
                 </div>
             </div>
-            <div class="row justify-content-center align-content-center align-items-center px-5">
-                <div class="col">
+            <div
+                class="row justify-content-center align-content-center align-items-center px-2 px-lg-5 d-flex flex-column-reverse flex-lg-row  mb-3 mb-lg-0">
+                <div class="col-12 col-md-6">
                     <h3 class="fw-bold">অ্যাপয়েন্টমেন্ট বুক করুন</h3>
                     <p class="text-justify">প্রায় এক ক্লিকেই দ্রুত ডাক্তারের অ্যাপয়েন্টমেন্টের জন্য জিজ্ঞাসা করুন।
                         বাকিটা আমরা দেখভাল করি।</p>
                 </div>
-                <div class="col">
-                    <img src="images/icons/appointment.png" alt="">
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid" src="images/icons/appointment.png" alt="">
                 </div>
             </div>
-            <div class="row justify-content-center align-content-center align-items-center px-5">
-                <div class="col">
-                    <img src="images/icons/telemedicine.png" alt="">
+            <div class="row justify-content-center align-content-center align-items-center px-2 px-lg-5  mb-4 mb-lg-0">
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid" src="images/icons/telemedicine.png" alt="">
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6">
                     <h3 class="fw-bold">শীঘ্রই সুস্থ হয়ে উঠুন</h3>
                     <p class="text-justify">ডাক্তারের কাছে যান, আপনার অ্যাপয়েন্টমেন্টের ভিত্তিতে সেবা নিন। সুস্বাস্থ্য
                         এবং সুখ ফিরে পান।</p>
                 </div>
             </div>
+        </section>
+
+        <section id="doctor-list" class="container mb-5">
+            <h2 class="heading mx-md-auto">বিশেষজ্ঞ <span class="colorized-heading">চিকিৎসক </span> গণ</h2>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3 mt-3 mt-lg-0">
+                <div class="col">
+                    <div class="card">
+                        <img src="images/person/person-1.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">অধ্যাপক ডাঃ এস কে মনির</h5>
+                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি (যুক্তরাষ্ট্র)</p>
+                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="images/person/person-2.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">অধ্যাপক ডাঃ সাইদুল ইসলাম</h5>
+                            <p class="card-text">এমবিবিএস, এমডি (এন্ডােক্রাইনােলজী ও মেটাবলিজম - যুক্তরাষ্ট্র)
+                            </p>
+                            <p class="card-text fw-bold">ডায়াবেটিস, থাইরয়েড ও হরমােন বিশেষজ্ঞ</p>
+                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="images/person/person-3.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">অধ্যাপক ডাঃ সাবিনা জাহান</h5>
+                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি (যুক্তরাষ্ট্র)</p>
+                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="images/person/person-4.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">অধ্যাপক ডাঃ ইমরান বিন ইউসুফ</h5>
+                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি (যুক্তরাষ্ট্র)</p>
+                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="images/person/person-5.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">অধ্যাপক ডাঃ এম ফয়েজ</h5>
+                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি (যুক্তরাষ্ট্র)</p>
+                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="more text-end text-lg-center mt-lg-5" data-bs-toggle="modal" data-bs-target="#exampleModal">আরো
+                দেখুন <i class="fa-solid fa-arrow-right"></i></p>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel"><span style="color: #ff2525">বিশেষজ্ঞ
+                                    ডাক্তার</span> গণ
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3">
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-1.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-2.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-3.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-4.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-5.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-6.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-7.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-8.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-9.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-10.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-11.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-12.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-13.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-14.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-15.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-16.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-17.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-18.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-19.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images/person/person-20.jpg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ডাঃ এস কে মনির</h5>
+                                            <p class="card-text">এফসিপিএস (মেডিসিন), এফআরসিপি (এডিন), পিএইচডি
+                                                (যুক্তরাষ্ট্র)</p>
+                                            <p class="card-text fw-bold">মেডিসিন ও নিউরোমেডিসিন বিশেষজ্ঞ</p>
+                                            <p class="card-text">প্রাক্তন অধ্যাপক ও বিভাগীয় প্রধান</p>
+                                            <p class="card-text">ঢাকা মেডিকেল কলেজ ও হাসপাতাল</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- main section ends -->
 
@@ -119,9 +768,10 @@
 
 
     <!-- footer section starts -->
-    <footer class="bg-danger mt-4 pt-5 pb-1">
+    <footer id="footer" class="bg-danger mt-4 pt-5 pb-1">
         <div id="footer-content" class="container">
-            <div class="d-flex align-items-center justify-content-between text-white text-center">
+            <div
+                class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between text-white text-center">
                 <div>
                     <h5 class="footer-heading fw-semibold text-md-start pt-3 pt-lg-0 mb-2">আমাদের সাথে সংযুক্ত থাকুন
                     </h5>
@@ -132,7 +782,7 @@
                 </div>
                 <div>
                     <div class="icon d-md-flex align-items-center">
-                        <div class="me-md-4"><img src="images/icons/qr-code.png" alt="" width="100"></div>
+                        <div class="me-md-4 mb-3 mb-md-0"><img src="images/icons/qr-code.png" alt="" width="100"></div>
                         <div class="d-flex flex-column">
                             <img class="footer-logo" src="images/icons/play-store.png" alt="">
                             <img class="footer-logo" src="images/icons/app-store.png" alt="">
@@ -140,7 +790,7 @@
                     </div>
                 </div>
             </div>
-            <p class="text-center text-white"> &copy;২০২৩ MJIJ. সমস্ত অধিকার সংরক্ষিত।<br>
+            <p class="small-text text-center text-white"> &copy;২০২৩ MJIJ. সমস্ত অধিকার সংরক্ষিত।<br>
                 তৈরি করেছেন- মোঃ জুম্মুন ইসলাম</p>
         </div>
     </footer>
@@ -154,6 +804,63 @@
 
     <!-- JS file linking  -->
     <script src="app.js"></script>
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-center" id="exampleModalLabel"><span style="color: #ff2525">লগইন
+                            ফর্ম</span></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row mb-3">
+                            <label for="inputName" class="col-sm-2 col-form-label">ইউজার নেইম</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputName">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">ই-মেইল</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">পাসওয়ার্ড</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword">
+                            </div>
+                        </div>
+                        <fieldset class="row mb-3">
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck4">
+                                    <label class="form-check-label" for="gridCheck4">
+                                        সকল শর্তাবলীর সাথে একমত পোষণ করছি।
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <p class="text-success">একাউন্ট নেই? এখনই সাইন আপ করুন। <a href="" data-bs-dismiss="modal"
+                                data-bs-target="#exampleModalToggle7" data-bs-toggle="modal"> সাইন আপ</a></p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="submit-button" type="button" class="btn btn-primary">লগ ইন</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

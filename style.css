@@ -8,11 +8,11 @@ header {
 
 
 #header-content {
-    max-width: 1500px !important;
+    max-width: 1400px !important;
 }
 
 #footer-content {
-    max-width: 1440px !important;
+    max-width: 1400px !important;
 }
 
 .text-heading {
@@ -75,11 +75,12 @@ header {
 
 .footer-logo {
     cursor: pointer;
-    width: 140px;
+    width: 148px;
     height: 48.2px;
 }
 
-.fa-brands {
+.fa-brands,
+.fa-solid {
     cursor: pointer;
     font-size: 25px;
     margin: 0 10px;
@@ -95,4 +96,76 @@ nav a {
     margin-left: 25px !important;
 }
 
-@media screen and (max-width: 560px) {}
+.small-text {
+    font-size: 13px;
+}
+
+
+.card-body {
+    padding: 15px 10px !important;
+}
+
+.card-title {
+    font-weight: 550;
+}
+
+.card-text {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.more {
+    color: var(--mainColor);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#doctor-list {
+    margin-bottom: 150px !important;
+}
+
+
+@media screen and (max-width: 560px) {
+    .text-heading {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .heading {
+        padding: 0 10px;
+        margin: 60px 0 30px 0;
+        font-size: 24px;
+        border-right: none;
+    }
+
+    .small-text {
+        margin-top: 25px;
+        font-size: 10px;
+    }
+
+    .card-body {
+        padding: 10px 5px !important;
+    }
+
+    .card-title {
+        font-size: 13px;
+        font-weight: bolder !important;
+    }
+
+    .card-text {
+        font-size: 9px;
+    }
+
+    h3 {
+        font-size: 20px !important;
+    }
+
+    .more {
+        padding-top: 25px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
